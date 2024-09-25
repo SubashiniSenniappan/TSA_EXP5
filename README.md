@@ -1,4 +1,5 @@
 # Ex.No: 05  IMPLEMENTATION OF TIME SERIES ANALYSIS AND DECOMPOSITION
+# Developed by Subashini S
 ### Date: 
 
 
@@ -16,10 +17,9 @@ To Illustrates how to perform time series analysis and decomposition on the mont
 
 ```
 
+
 import pandas as pd
-import matplotlib.pyplot as plt
-from statsmodels.tsa.seasonal import seasonal_decompose
-import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 from statsmodels.tsa.seasonal import seasonal_decompose
 data = pd.read_csv('/content/weather_classification_data.csv')
