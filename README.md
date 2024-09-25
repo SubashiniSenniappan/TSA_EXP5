@@ -19,18 +19,18 @@ To Illustrates how to perform time series analysis and decomposition on the mont
 import pandas as pd
 import matplotlib.pyplot as plt
 from statsmodels.tsa.seasonal import seasonal_decompose
+import pandas as pd
+import matplotlib.pyplot as plt
+from statsmodels.tsa.seasonal import seasonal_decompose
 data = pd.read_csv('/content/weather_classification_data.csv')
 print("FIRST FIVE ROWS:")
 print(data.head())
-data = data.head(120)  # Adjust this number as per your dataset's requirement
-data['Date'] = pd.date_range(start='1/1/2010', periods=len(data), freq='M')
-data.set_index('Date', inplace=True)
 result = seasonal_decompose(data['Temperature'], model='additive', period=12)
 print("\nPLOTTING THE DATA:")
 plt.figure(figsize=(10, 5))
 plt.plot(data['Temperature'])
-plt.title('Monthly Average Temperature Over Time')
-plt.xlabel('Date')
+plt.title('Temperature Data (Sequential)')
+plt.xlabel('Index')
 plt.ylabel('Temperature')
 plt.show()
 print("\nSEASONAL PLOT REPRESENTATION:")
@@ -62,24 +62,28 @@ plt.show()
 ### OUTPUT:
 FIRST FIVE ROWS:
 
-![Screenshot 2024-09-17 210857](https://github.com/user-attachments/assets/77ca7d15-9da2-4a64-a1cb-92261a205df7)
 
+![Screenshot 2024-09-25 083749](https://github.com/user-attachments/assets/548042c8-966d-4096-b72d-21165c479a8f)
 
 PLOTTING THE DATA:
 
-![image](https://github.com/user-attachments/assets/1414d633-f9f2-4c66-b497-461fb9e5c166)
+![plot data](https://github.com/user-attachments/assets/7fbf4f29-256f-406d-890a-c5fe3e458934)
 
 SEASONAL PLOT REPRESENTATION :
 
-![image](https://github.com/user-attachments/assets/2d247834-32c2-455c-93c3-34622ed70493)
 
+
+![seasonal decomposition](https://github.com/user-attachments/assets/44a48193-5036-4537-be2e-cc772ae3949f)
 
 TREND PLOT REPRESENTATION :
-![image](https://github.com/user-attachments/assets/3820cd53-524e-44ac-850f-9e8d177822c6)
+
+![trend decomposition](https://github.com/user-attachments/assets/93da1c77-9a74-4736-ad56-6f00df52b893)
 
 OVERAL REPRESENTATION:
 
-![image](https://github.com/user-attachments/assets/eb0dcdd0-d86e-405f-8c6b-e55bf1c19ddb)
+![overall](https://github.com/user-attachments/assets/e0f1dcff-9995-4353-8a9b-2a4a76dd5f26)
+
+
 
 
 ### RESULT:
