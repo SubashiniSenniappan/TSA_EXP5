@@ -4,7 +4,7 @@
 
 
 ### AIM:
-To Illustrates how to perform time series analysis and decomposition on the monthly average temperature of a city/country and for weather classification.
+To Illustrates how to perform time series analysis and decomposition for weather classification.
 
 ### ALGORITHM:
 1. Import the required packages like pandas and numpy
